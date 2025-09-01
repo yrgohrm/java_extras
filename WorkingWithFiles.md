@@ -55,12 +55,14 @@ public void processFile(Path inputPath, Path weightsPath) throws Exception {
 Använd try-with-resources. Det är inte svårare än så. När koden i try-blocket körts klart, eller
 ett undantag kastas kommer filen automatiskt att stängas under ordnade former.
 
+```Java
 public void processFile(Path inputPath, Path weightsPath) throws Exception {
     try (BufferedReader input = Files.newBufferedReader(inputPath)) {
       List<DataRecord> records = parseInput(input);
       return calculationOfResult(records);
     }
 }
+```
 
 ## Gör inte try-with-resources blocket större än nödvändigt
 
