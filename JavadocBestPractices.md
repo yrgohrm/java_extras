@@ -216,8 +216,8 @@ dokumentation kan vara värre än ingen dokumentation alls.
 
 ### Stil och perspektiv
 
-För att dokumentationen ska vara konsekvent och professionell är det viktigt att vara konsekvent och
-tänka på sitt språkbruk:
+För att dokumentationen ska vara professionell är det viktigt att vara konsekvent och tänka på sitt
+språkbruk:
 
 #### Använd tredje person
 
@@ -251,7 +251,7 @@ som "e.g." eller "i.e."; använd istället "for example" eller "that is".
 
 ## Detaljnivå
 
-Dokumentationen är kodens **kontrakt**. Den ska beskriva allt som en anropare kan förlita sig på om
+Dokumentationen är kodens kontrakt. Den ska beskriva allt som en anropare kan förlita sig på om
 metodens beteende. Dokumentationen bör vara såpass detaljerad och tydlig att man inte behöver läsa
 koden för att förstå.
 
