@@ -1,7 +1,7 @@
 # Att skriva bra dokumentation för kod
 
 Här kommer en kort sammanfattning om vad som utgör bra dokumentation av kod, framför allt med
-inriktning mot hur man skriver bra javadoc. Det är så klart även applicerbart i andra sammanhang
+fokus på hur man skriver bra javadoc. Det är så klart även applicerbart i andra sammanhang
 som när man använder JSDoc eller Doxygen.
 
 Bra dokumentation är avgörande eftersom den förvandlar din källkod till en **tydlig
@@ -31,18 +31,15 @@ Exempel:
 
 /// Modern Markdown comment.
 ///
-/// @see 1.0
+/// @since 1.0
 ```
 
 ### Den sammanfattande första meningen
 
 **Den första meningen är viktigast.** Den ska vara en koncis men komplett sammanfattning av vad
 klassen, metoden eller fältet gör. Detta beror på att Javadoc-verktyget automatiskt kopierar den
-första meningen till sammanfattningstabellerna i den genererade dokumentationen.
-
-Den första meningen i varje javadoc-kommentar är avgörande. Den kopieras automatiskt till
-sammanfattningstabellerna och måste därför vara en **koncis men komplett sammanfattning** av
-objektet/metoden.
+första meningen till sammanfattningstabellerna i den genererade dokumentationen. Den måste därför
+vara en **koncis men komplett sammanfattning** av objektet/metoden.
 
 Använd aldrig en hyperlänk (`{@link}`) i den första meningen, eftersom det kan göra den genererade
 sammanfattningen förvirrande. Använd istället `{@code}`.
@@ -127,6 +124,9 @@ metoder och klasser. De som är absolut viktigast, för metoder, är följande:
 - **`@throws:`** Dokumenterar undantag som metoden kan kasta, inklusive *kontrollerade undantag*
   (som måste deklareras i metodsignaturen) och de *okontrollerade undantag* som användaren rimligen
   kan vilja hantera.
+
+Taggen **`@author`** kan man gärna undvika då den lätt blir utdaterad och kan ge en missvisande bild
+av kodägande. Vem som har gjort vad ser vi ändå i vårt program för versionshantering.
 
 Exempel:
 ```Java
@@ -232,8 +232,13 @@ en instruktion).
 Metodbeskrivningar bör börja med en verbfras (eftersom en metod implementerar en operation). För
 klass-, gränssnitts- och fältbeskrivningar kan du utelämna subjektet och bara ange objektet.
 
-- **Metodexempel:** "Gets the label for this button."
-- **Klass/fältexempel:** "A button label."
+**Metodexempel:**
+- Bra: "Gets the label for this button."
+- Dålig: "This method gets the label for this button."
+
+**Klass/fältexempel:**
+- Bra: "A button label."
+- Dålig: "This field is a button label."
 
 #### Använd konsekventa referenser
 
@@ -274,7 +279,7 @@ Dåligt exempel:
  * @param language The language.
  * @param country The country.
  * @param variant The variant.
- * @throws    NullPointerException thrown if something is null.
+ * @throws NullPointerException thrown if something is null.
  * @return the object
  */
 public static Locale of(String language, String country, String variant) {
@@ -393,7 +398,15 @@ Exempel:
  */
 public static String formatDisplayName(String rawName, String preferredFormat) 
         throws IllegalArgumentException {
-    
-    // ...   
+    // ...
 }
 ```
+
+## Referenser
+
+- https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html
+- https://openjdk.org/jeps/467
+- https://blog.joda.org/2012/11/javadoc-coding-standards.html
+- https://developer.atlassian.com/server/confluence/javadoc-standards/
+- https://www.jrebel.com/blog/tips-and-tricks-for-better-java-documentation
+- https://google.github.io/styleguide/docguide/best_practices.html
