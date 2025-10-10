@@ -38,8 +38,7 @@ Exempel:
 
 **Den första meningen är viktigast.** Den ska vara en koncis men komplett sammanfattning av vad
 klassen, metoden eller fältet gör. Detta beror på att Javadoc-verktyget automatiskt kopierar den
-första meningen till sammanfattningstabellerna i den genererade dokumentationen. Den måste därför
-vara en **koncis men komplett sammanfattning** av objektet/metoden.
+första meningen till sammanfattningstabellerna i den genererade dokumentationen.
 
 Använd aldrig en hyperlänk (`{@link}`) i den första meningen, eftersom det kan göra den genererade
 sammanfattningen förvirrande. Använd istället `{@code}`.
