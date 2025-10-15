@@ -165,8 +165,8 @@ Uttrycket "throw early" innebär att man vill kasta undantag så tidigt som
 möjligt. Har du en metod som kräver att ett antal villkor skall uppfyllas
 kontrollera dessa direkt och kasta ett undantag om något är fel. Undvik att göra
 halva arbetet och sedan inse att något är fel så du inte kan fortsätta. På så
-vis undviker du även att undantaget som faktiskt kastas är et följdfel av någon
-annat, vilket kör felet svårare att diagnosticera.
+vis undviker du även att undantaget som faktiskt kastas är ett följdfel av något
+annat, vilket gör felet svårare att diagnosticera.
 
 "Catch late" bör egentligen vara "catch as early as you can actually handle the
 problem but not too early" men det är inte lika slagfärdigt.

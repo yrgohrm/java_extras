@@ -5,7 +5,7 @@ Java](https://www.pearson.com/en-us/subject-catalog/p/effective-java/P2000000001
 av Joshua Bloch.
 
 Grunden i att jämföra objekt med varandra i Java bygger på metoden
-`booleanequals(Object obj)`. Den bygger på fyra regler som vi **måste** hålla
+`boolean equals(Object obj)`. Den bygger på fyra regler som vi **måste** hålla
 oss till om systemet som sådant skall fungera.
 
 Bryter vi så mycket som en av reglerna kan vi inte längre förlita oss på att
@@ -13,10 +13,10 @@ saker som sökning eller sortering kommer fungera som det är tänkt.
 
 Reglerna är som följer:
 
-* Reflexivt: x.equals(x) skall returnera sant för alla x som inte är null.
-* Symmetriskt: x.equals(y) skall returnera sant endast om y.equals(x) returnerar sant.
-* Transitivt: om x.equals(y) returnerar sant och y.equals(z) returnerar sant, ska då x.equals(z) returnera sant.
-* Konsekvent: Alla anrop av x.equals(y) skall konsekvent returnera sant eller
+* **Reflexivt**: x.equals(x) skall returnera sant för alla x som inte är null.
+* **Symmetriskt**: x.equals(y) skall returnera sant endast om y.equals(x) returnerar sant.
+* **Transitivt**: om x.equals(y) returnerar sant och y.equals(z) returnerar sant, ska då x.equals(z) returnera sant.
+* **Konsekvent**: Alla anrop av x.equals(y) skall konsekvent returnera sant eller
   konsekvent returnera falskt, förutsatt att ingen information som används i
   equals-jämförelser på objekten ändras.
 
