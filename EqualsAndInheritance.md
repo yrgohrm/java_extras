@@ -160,7 +160,7 @@ endast två objekt av exakt samma typ kan vara lika med varandra. Men i slutänd
 som vi förväntar oss skall gälla för våra objekt.
 
 Den tråkiga sanningen är att det inte går att lösa och att det i denna typ av
-sammanhang kan vara rimligt att istället använda sig av komposition istället för
+sammanhang kan vara rimligt att använda sig av komposition istället för
 arv för att bygga sina objekt.
 
 ```Java
